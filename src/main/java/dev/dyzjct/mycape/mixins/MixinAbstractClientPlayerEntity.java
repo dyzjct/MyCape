@@ -1,6 +1,6 @@
 package dev.dyzjct.mycape.mixins;
 
-import dev.dyzjct.mycape.LoadCape;
+import dev.dyzjct.mycape.MyCape;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.network.AbstractClientPlayerEntity;
 import net.minecraft.client.network.ClientPlayerEntity;
@@ -17,7 +17,7 @@ public abstract class MixinAbstractClientPlayerEntity {
     public void getCapeTexture(CallbackInfoReturnable<Identifier> cir) {
         ClientPlayerEntity player = MinecraftClient.getInstance().player;
         if (player != null && player.equals(this)) {
-            cir.setReturnValue(LoadCape.INSTANCE.getCape());
+            cir.setReturnValue(MyCape.INSTANCE.getCape());
         }
     }
 
@@ -25,7 +25,7 @@ public abstract class MixinAbstractClientPlayerEntity {
     public void getElytraTexture(CallbackInfoReturnable<Identifier> cir) {
         ClientPlayerEntity player = MinecraftClient.getInstance().player;
         if (player != null && player.equals(this)) {
-            cir.setReturnValue(LoadCape.INSTANCE.getCape());
+            cir.setReturnValue(MyCape.INSTANCE.getCape());
         }
     }
 }
