@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "mycape",
+  "version": "1.0",
+  "name": "MyCape",
+  "description": "Give you a cape.",
+  "authors": [
+    "dyzjct"
+  ],
+  "contact": {
+  },
+  "environment": "client",
+  "entrypoints": {
+    "main": [
+      "dev.dyzjct.mycape.MyCape::INSTANCE"
+    ]
+  },
+  "mixins": [
+    "mixins.mycape.json"
+  ],
+  "accessWidener": "mycape.accesswidener",
+  "depends": {
+    "fabricloader": ">=0.14.24",
+    "fabric": "*",
+    "minecraft": "1.20.1"
+  }
+}

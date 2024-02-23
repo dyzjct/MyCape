@@ -1,2 +1,2 @@
 # MyCape
-cape.
+Give you a cape.
